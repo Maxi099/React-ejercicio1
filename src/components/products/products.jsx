@@ -6,7 +6,7 @@ import {Card} from "./card"
 export const Products =()=>{
     
 return(
-    <ProductsContainer id="productos">
+    <ProductsContainer>
         <h2>PRODUCTOS DESTACADOS</h2>
         <CardsContainer>        
             {

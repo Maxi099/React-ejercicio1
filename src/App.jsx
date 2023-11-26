@@ -1,12 +1,15 @@
 import React from 'react'
 import './App.css'
-import {HomeScreen}   from './screens/home_screen'
+import {  ContextMenu } from "./context/menu";
+import { ContainerRoutes } from "./routes/routes";
+
 
 function App() {
     return (
-        <>
-        <HomeScreen/>
-        </>   
+        <ContextMenu>
+      <ContainerRoutes/>
+        </ContextMenu>
+       
 
     )
   

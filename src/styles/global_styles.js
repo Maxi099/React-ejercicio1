@@ -16,8 +16,6 @@ padding:0;
 box-sizing: border-box;
 list-style: none;
 text-decoration: none;
-scroll-behavior: smooth;
-scroll-margin-top:50px ;
 font-family: "Open Sans";
 
 

@@ -40,6 +40,7 @@ export const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    background:white;
     align-items: center;
      gap: 12px;
     width:300px;
@@ -49,6 +50,8 @@ export const CardContainer = styled.div`
     @media (max-width: 360px) {
         width:90%;
       }
+
+
 
 `
 
