@@ -7,7 +7,8 @@ display:flex;
 flex-direction:column;
 align-items:center;
 gap:80px;
-padding:50px 0;
+
+padding:60px 0;
 width:100%;
 
 background: var(--colorverdegris);

@@ -4,8 +4,10 @@ import styled from "styled-components";
 export const NavbarContainer = styled.div`
 
 display: flex;
+
   justify-content: center;
   align-items: center;  
+  gap:20px;
 
 
 ul{
@@ -98,12 +100,42 @@ ul{
     
     
     
-    
-
-
 
 
 `
+
+export const CartMenuButton = styled.div`
+
+       
+           
+       position:relative;
+        cursor:pointer;
+        color: var(--colorverde); 
+        
+        font-size: 1.3rem;
+       
+          
+      
+
+
+        `
+
+
+        export const LoginMenuButton = styled.div`
+
+       
+           
+       
+        cursor:pointer;
+        color: var(--colorverde); 
+        
+        font-size: 1.3rem;
+       
+          
+      
+
+
+        `
 
 
 
@@ -156,3 +188,35 @@ position:absolute;
 
 
 
+
+export const Burbuja = styled.div`
+
+       
+           
+       
+align-items: center;
+justify-content: center;
+color: white;
+position: absolute;
+height: 17px;
+width: 17px;
+border-radius: 50%;
+background-color:red ;
+box-shadow: 0 0 4px 1px black;
+-moz-box-shadow: 0 0 4px 1px black;
+-webkit-box-shadow: 0 0 4px 1px black;
+font-family:arial ;
+font-weight: bold;
+font-size: 11px;
+top:-7px;
+right: -7px;
+display: flex;
+
+          
+      
+
+
+        `
+
+
+ 

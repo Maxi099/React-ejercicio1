@@ -12,5 +12,7 @@ width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
+margin-top:80px;
+
 }
 `

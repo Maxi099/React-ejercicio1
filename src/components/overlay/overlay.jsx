@@ -1,14 +1,20 @@
 import React,{ useContext }  from "react";
 import {OverlayContainer} from "./styles"
-import {  MenuContext } from "../../context/menu";
-
-
+import {useDispatch, useSelector} from "react-redux"
+import { cerrarMenu } from "../../redux/menu/menuSlice.js";
+import { closeCart } from "../../redux/cart/cartSlice.js";
 export const Overlay =()=>{
+    const setMenu = useSelector (state=> state.menu)
+    const dispatch = useDispatch()
 
-    const menuValue= useContext(MenuContext)      
+    const handleClick=()=>{
+
+       dispatch(closeCart())
+       dispatch(cerrarMenu())
+    }
 return(
     
-<OverlayContainer onClick={menuValue.menuCerrar}></OverlayContainer>   
+<OverlayContainer onClick = {handleClick}></OverlayContainer>   
 
 )
     

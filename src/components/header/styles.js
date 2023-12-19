@@ -8,7 +8,7 @@ export const HeaderContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    position: sticky;
+    position: fixed;
     position:-webkit-sticky;
     background-color: white;
     top: 0;
@@ -29,5 +29,7 @@ width:100%;
     
 
 `
+
+
 
 

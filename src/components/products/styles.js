@@ -65,11 +65,13 @@ height:138px;
 align-items:center;
 text-align:center;
  span{
-    padding:10px 15px;
-    background-color:black;
+    padding:10px 0;
+    border:1px solid black;
+    width: 200px;
+  
     border-radius:10px;
     h4{
-        color:white;
+        color:black;
     }
  }
  @media (max-width: 360px) {

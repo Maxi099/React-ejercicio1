@@ -6,6 +6,7 @@ flex-direction:column;
 align-items:center;
 gap:50px;
 padding:60px 0;
+
 width:100%;
 
 background: var(--colorverdegris);
