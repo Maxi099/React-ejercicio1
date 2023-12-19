@@ -4,14 +4,22 @@ const INITIAL_STATE = {
         }
 
 export const menuSlice = createSlice({
-    name: 'menuhamburg',
+    name: 'menu',
     initialState:INITIAL_STATE,
     reducers: {
         toggleMenu: state => {
-            return !state;
+            return {
+                ...state,
+               menu: !state.menu
+            }
+           
         },
         cerrarMenu: state => {
-            return (state) && !state;
+            return {
+                ...state,
+                menu: (state.menu) && !state.menu
+
+            }
         },
           }
 })

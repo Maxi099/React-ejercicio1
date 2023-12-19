@@ -12,7 +12,7 @@ import { selectCategory } from "../../../redux/categories/categoriesSlice.js";
 
 export const Navbar =()=>{
   
-const setMenu = useSelector (state=> state.menuhambur)
+const setMenu = useSelector (state=> state.menu.menu)
 const setCart = useSelector (state=> state.cart1.hidden)
 const cartItems = useSelector (state=> state.cart1.cartItems)
 const dispatch = useDispatch()

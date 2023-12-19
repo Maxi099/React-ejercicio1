@@ -20,7 +20,7 @@ const reducers = combineReducers({
       categories: categoriesReducer,
     cart1: cartReducer,
     modal: modalReducer,
-    menuhambur: menuReducer,   
+    menu: menuReducer,   
    products: productsReducer
 })
 
