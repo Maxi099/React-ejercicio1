@@ -168,7 +168,7 @@ export const CartItemDer = styled.div`
 
 display: flex;
 align-items: center;
-
+position:relative;
 gap: 35px;
 @media (max-width: 576px) {
     flex-direction: column;
@@ -211,16 +211,16 @@ export const CartItemMenos = styled.div`
 
 padding: 3px 6px;
 background-color: var(--colorverde);
+opacity:   ${({ selected }) =>
+selected ? '1' : '0.4'};
 border-top-right-radius: 5px;
 border-bottom-right-radius: 5px;
-cursor: pointer;
+cursor:  ${({ selected }) =>
+selected ? 'pointer' : 'default'};
 display: flex;
 align-items: center;
 justify-content: center;
 font-weight: bold;
-
-
-
 `
 
 export const CartItemCantidad = styled.div`
@@ -234,6 +234,30 @@ padding: 3px 10px;
 
 `
 
+
+export const Message = styled.div`
+
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    background-color: white;
+    opacity:0.9;
+    z-index:100;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    text-align:center;
+    padding:0 10px;
+p{
+    font-weight:bold;
+}
+
+
+`
 
 
 

@@ -14,6 +14,10 @@ export const Header =()=>{
 msj="El item se agrego al carrito"
 if (Modal.msj===2)
 msj="El carrito esta vacio"
+if (Modal.msj===3)
+msj="El formulario fue enviado con exito"
+if (Modal.msj===4)
+msj="La compra se realizo con exito"
 
 return(
 <HeaderContainer>
@@ -23,7 +27,7 @@ return(
     <Navbar/>
     </HeaderItems>
     {
- Modal.modal && <ModalContainer>{msj} </ModalContainer>
+ Modal.modal && <ModalContainer numero={Modal.msj}>{msj}</ModalContainer>
     }
   
 </HeaderContainer>

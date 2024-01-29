@@ -94,3 +94,14 @@ border: none;
 
 
 `
+
+export const Error = styled.small`
+
+
+font-style:italic;
+color: white;
+margin:-10px;
+
+
+
+`

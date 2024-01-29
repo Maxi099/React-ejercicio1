@@ -2,11 +2,11 @@ import React from "react";
 import { Modal } from "./modal";
 
 
-export const ModalContainer = ( {children}  )=>{
+export const ModalContainer = ( { numero,children}  )=>{
 
 
 return(
-   <Modal>
+   <Modal $numero={numero}>
 {children}
 
    </Modal>   

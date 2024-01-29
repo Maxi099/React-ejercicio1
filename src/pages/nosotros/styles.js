@@ -36,7 +36,7 @@ margin: 0 15px;
 p{
     width:30%;
     text-align:center;
-    color: var(--colorverde);
+    color: black;
     @media (max-width: 992px){
         width:90%;
     }

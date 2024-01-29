@@ -10,11 +10,11 @@ import { setModal} from "../../redux/modal/modal.js";
 
 
 
-export const Card=( {id,nombre,precio, stock,img} )=>{
+export const Card=( {id, nombre,precio, stock,img} )=>{
 const dispatch= useDispatch()
 const Modal = useSelector (state=> state.modal)
 const handleClick=()=>{
-    dispatch(addToCart({id,nombre,precio,stock,img}))
+    dispatch(addToCart({id, nombre,precio,stock,img}))
     dispatch(setModal(1))
      setTimeout(() => {
         dispatch(setModal(1))

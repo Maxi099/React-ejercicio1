@@ -4,21 +4,36 @@ import {CartAbajo, CartBotons, CartContainer, CartLinea, CartSubtotal, CartTotal
 import { Boton } from "../boton/boton";
 import { CartItemContainer } from "./cartitem";
 import {useSelector} from "react-redux"
-import { clearCart } from "../../redux/cart/cartSlice.js";
 import {useDispatch} from "react-redux"
 import { closeCart } from "../../redux/cart/cartSlice.js";
+import { setCartMessage } from "../../redux/cartmessage/cartmessage.js";
+import { MessageContainer } from "./Message.jsx";
 export const Cart =()=>{
     
  const cartItems = useSelector(state=>state.cart1.cartItems)   
  const dispatch= useDispatch()
  const setCart = useSelector (state=> state.cart1.hidden)
  let total = cartItems.reduce((acc, curr) => acc + curr.precio * curr.cantidad,0);
+const msj = useSelector(state=>state.cartmessage1.msj)
+const CartMessageStatus = useSelector(state=>state.cartmessage1.message)
+
+
+const handleClickVaciar=()=>{
+    dispatch(setCartMessage(1))
+
+}
+const handleClickComprar=()=>{
+    dispatch(setCartMessage(2))
+
+}
 
 
     return(
 
 <CartContainer hidden={setCart} >
-
+    
+                    {CartMessageStatus && <MessageContainer numero={msj}/>}
+                    
                     <img onClick={()=>dispatch(closeCart())} src="assets/img/cerrar.svg" alt=""/>
                     <h2>CARRITO DE COMPRAS</h2>
                     <ItemsCartContainer>                       
@@ -46,8 +61,8 @@ export const Cart =()=>{
                                         <h3>$ {total} </h3>                              
                                         </CartTotal>
                                 <CartBotons>
-                                    <Boton onClick= {()=>dispatch(clearCart())}  nombre="Vaciar Carrito"/>
-                                    <Boton nombre="Realizar Compra"/>                                     
+                                    <Boton onClick= {handleClickVaciar}  nombre="Vaciar Carrito"/>
+                                    <Boton onClick= {handleClickComprar} nombre="Realizar Compra"/>                                     
                                     </CartBotons>
                                     </CartAbajo>                 
         
