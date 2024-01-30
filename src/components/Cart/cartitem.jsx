@@ -22,6 +22,7 @@ export const CartItemContainer =({id,nombre,precio, stock,img,cantidad})=>{
         
     }
     const handleClick2=()=>{
+        document.querySelector('#cart').scrollTo(0,0)  
         dispatch(setCartMessage(3+id))
        /* dispatch(removeBotFromCart(id ))
         if (cartItems.length<=1)

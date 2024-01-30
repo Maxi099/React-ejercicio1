@@ -16,7 +16,10 @@ position:absolute;
     z-index: 25;
     /*width: 35%;*/
     background-color: var(--colorverdegris);
-     overflow-y: auto;     
+     
+     
+     overflow-y: ${props => (props.$numero!=0) ? 'hidden' : 'auto'};
+
     transition: transform 0.5s ease;   
       transform:  ${({ hidden }) =>
       hidden ? 'translate(300%);' : 'translate(0)'};    
@@ -25,7 +28,7 @@ position:absolute;
         padding-left: 10px;
         padding-right: 10px;
       width: 100%;   
-        
+      height:100dvh;
       }    
 
     >img{
@@ -238,12 +241,13 @@ padding: 3px 10px;
 export const Message = styled.div`
 
     position:absolute;
-    top:0;
-    bottom:0;
+   top:0;
+       
+    height:100%;
     width:100%;
-    height:100vh;
+    
     background-color: white;
-    opacity:0.9;
+    
     z-index:100;
     display: flex;
     flex-direction:column;
@@ -252,9 +256,8 @@ export const Message = styled.div`
     gap:20px;
     text-align:center;
     padding:0 10px;
-    @media (max-width: 768px) {
-        height:100dvh;
-      }
+    
+    
 
 p{
     font-weight:bold;

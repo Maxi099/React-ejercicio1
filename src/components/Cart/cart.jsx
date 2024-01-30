@@ -18,11 +18,14 @@ const msj = useSelector(state=>state.cartmessage1.msj)
 const CartMessageStatus = useSelector(state=>state.cartmessage1.message)
 
 
+
 const handleClickVaciar=()=>{
-    dispatch(setCartMessage(1))
+    document.querySelector('#cart').scrollTo(0,0)  
+      dispatch(setCartMessage(1))
 
 }
 const handleClickComprar=()=>{
+    document.querySelector('#cart').scrollTo(0,0)  
     dispatch(setCartMessage(2))
 
 }
@@ -30,7 +33,7 @@ const handleClickComprar=()=>{
 
     return(
 
-<CartContainer hidden={setCart} >
+<CartContainer hidden={setCart} $numero={msj} id="cart">
     
                     {CartMessageStatus && <MessageContainer numero={msj}/>}
                     
