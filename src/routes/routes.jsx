@@ -1,5 +1,5 @@
 import {
-    BrowserRouter,
+  HashRouter,
     Routes,
     Route,
     Navigate
@@ -14,7 +14,7 @@ import { Productos } from '../pages/productos/productos';
   export const ContainerRoutes = () => {
 
     return (
-      <BrowserRouter>
+      <HashRouter>
          <Layout>
             <Routes>
               <Route path='/' element={<Home />} />  
@@ -24,7 +24,7 @@ import { Productos } from '../pages/productos/productos';
               <Route path='*' element={<Navigate to='/'/>} />
             </Routes>
           </Layout>       
-      </BrowserRouter>
+      </HashRouter>
     );
   };
   
